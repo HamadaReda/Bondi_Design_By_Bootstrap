@@ -1,0 +1,203 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+/* Start Navbar */
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: var(--green-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+.navbar .search svg{
+  color: var(--green-color);
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  color: var(--yellow-color);
+}
+/* End Navbar */
+/* Start Landing */
+.landing {
+  min-height: calc(100vh - 72px);
+  background-color: var(--dark-color);
+}
+/* End Landing */
+/* Start Main Heading */
+.main-heading::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+} 
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+/* End Main Heading */
+/* Start Our-work */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work .nav .nav-link {
+  color: black;
+}
+.our-work .nav .nav-link.active {
+  color: var(--yellow-color);
+}
+.our-work .nav .nav-link:not(.active):hover {
+  color: var(--red-color);
+}
+.our-work .box {
+  position: relative;
+  overflow: hidden;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgb(51 209 204 / 75%);
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  transform: translateY(calc(100% + 4px));
+  transition: 0.3s;
+}
+.our-work .box:hover::before {
+  transform: translateY(0%);
+}
+/* End Our-work */
+/* Start Stuff */
+.stuff .stuff-text {
+  max-width: 500px;
+}
+/* End Stuff */
+/* Start Team */
+.team {
+  background-color: var(--section-color);
+}
+.team .team-text {
+  max-width: 80%;
+}
+.team .team-text h1 {
+  color: var(--yellow-color);
+}
+.team .card {
+  border: none;
+}
+.team .card-title {
+  background-color: var(--green-color);
+  color: white;
+}
+/* End Team */
+/* Start Tech */
+
+/* End Tech */
+/* Start Project */
+.project {
+  background-color: var(--dark-color);
+}
+/* End Project */
+/* Start Blog */
+
+/* End Blog */
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe ::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--dark-color);
+} 
+/* End Subscribe */
+/* Start Footer */
+.footer {
+  background-color: var(--dark-color);
+}
+.footer .info .copyright > span {
+  color: var(--green-color);
+}
+.footer .info p:last-child span {
+  color: var(--red-color);
+}
+.footer .links li a,
+.footer .about li a {
+  text-decoration: none;
+}
+.footer .contact .icons svg {
+  height: 20px;
+  width: 20px;
+}
+@media (max-width: 767px) {
+  .footer .contact .icons {
+    justify-content: center;
+  }
+}
+.footer .contact .icons .facebook {
+  background-color: #347cd2;
+}
+.footer .contact .icons .twitter {
+  color: white;
+}
+.footer .contact .icons .google {
+  background-color: #ff4032;
+}
+.footer .contact .icons .dribbble {
+  background-color: #ff3298;
+}
+/* End Footer */
